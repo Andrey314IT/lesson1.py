@@ -1,16 +1,22 @@
 class Person:
   height = 160
   age = 22
-  name = "Kyryl"
+  name = "Kiril"
   is_male = True
+  hobby = "plaing guitar"
 
   def __init__(self,surname):
     self.surname = surname
-    print(self.name)
+
+  def do_my_thing(self):
+    print("I love", self.hobby)
+
+  
 
 me = Person("Kobzar")
-You = Person("Test")
+me.hobby = "reading"
+me.do_my_thing()
 
-print(me.age)
-me.age += 1
-print(me.age)
+my_friend = Person("Andrey")
+my_friend.hobby = "Plaing guitar"
+my_friend.do_my_thing()
